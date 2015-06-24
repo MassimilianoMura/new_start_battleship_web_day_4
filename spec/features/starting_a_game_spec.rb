@@ -21,14 +21,17 @@ feature 'Starting a new game' do
     click_link('Gimme a board!')
     expect(page).to have_content "ABCDEFGHIJ"
   end
+end
 
-  scenario 'It places a ship somewhere in the board' do
+feature 'Place a ship on a board' do
+  scenario 'Can place a ship somewhere in the board' do
     visit'/getboard'
     fill_in 'coord', with: 'A5'
     click_button('Place ship')
-    expect(page).to have_content "x"
+    expect(page).to have_content "BBBB" #Not sure how to test for other ships/sizes
   end
 
+<<<<<<< HEAD
   # scenario 'It recalls a coordinate' do
   #   visit'/placeship'
   #   fill_in 'coord', with: 'A5'
@@ -39,4 +42,6 @@ feature 'Starting a new game' do
 
 
   
+=======
+>>>>>>> 48af979fc99b42ddf1b49702dfb5c70002558fa7
 end
