@@ -29,12 +29,14 @@ feature 'Starting a new game' do
     expect(page).to have_content "x"
   end
 
-  scenario 'It recalls a coordinate' do
-    visit'/placeship'
-    fill_in 'coord', with: 'A5'
-    click_button('Place ship')
-    expect(page).to have_content "A5"
+  # scenario 'It recalls a coordinate' do
+  #   visit'/placeship'
+  #   fill_in 'coord', with: 'A5'
+  #   click_button('Place ship')
+  #   expect(page).to have_content "A5"
+  # end
 
 
-  end
+
+  
 end
