@@ -19,6 +19,7 @@ class BattleshipsWeb < Sinatra::Base
   get '/getboard_and_place_ships' do
     $game = Game.new Player, Board
     @board = $game.own_board_view $game.player_1
+    @board2 = $game.own_board_view $game.player_2
     erb :getboard_and_place_ships
   end
 
@@ -44,6 +45,7 @@ class BattleshipsWeb < Sinatra::Base
   get '/battle' do
 
     @board = $game.own_board_view $game.player_1
+    @board2 = $game.own_board_view $game.player_2
 
     erb :battle
 
@@ -57,6 +59,7 @@ class BattleshipsWeb < Sinatra::Base
     $game.player_2.shoot coordinates
 
     @board = $game.own_board_view $game.player_1
+    @board2 = $game.own_board_view $game.player_2
 
     erb :battle
 
