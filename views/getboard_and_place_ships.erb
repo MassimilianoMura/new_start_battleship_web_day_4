@@ -1,9 +1,10 @@
+<!-- THIS IS SERVER SIDE -->
 <div>
   <pre><%= @board %></pre>
   <p>Time to place your ships.</p>
 
 <div>
-  <form action='/getboard_and_place_ships' method='POST'>
+  <form method='POST' action='/getboard_and_place_ship'>
     <label>Select and place your ship</label>
       <select name='ships'>
         <option>submarine</option>
@@ -12,7 +13,7 @@
         <option value="A">A</options>
       </select>
       <select name='y_coord'>
-        <option ="1">1</options>
+        <option value="1">1</options>
       </select>
       <select name='orientation'>
         <option value='horizontally'>horizontally</options>
