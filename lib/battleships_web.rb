@@ -16,18 +16,10 @@ class BattleshipsWeb < Sinatra::Base
     erb :start
   end
 
-  get '/getboard' do
+  get '/getboard_and_place_ships' do
     $game = Game.new Player, Board
     @board = $game.own_board_view $game.player_1
-    erb :getboard
-  end
-
-  post '/placeship' do
-
-      @coord = params[:coord]
-      $game.player_1.place_ship Ship.battleship, @coord
-      redirect '/getboard'
-
+    erb :getboard_and_place_ships
   end
 
   run! if app_file == $0
