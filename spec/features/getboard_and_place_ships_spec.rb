@@ -12,4 +12,10 @@ feature "placing ships" do
     expect(page).to have_content '1|S'
   end
 
+  scenario 'press button to start the battle' do
+    visit '/getboard_and_place_ships'
+    click_button('Start the battle!')
+    expect(page).to have_content 'Start the battle'
+  end
+
 end
