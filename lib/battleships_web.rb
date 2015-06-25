@@ -10,12 +10,14 @@ class BattleshipsWeb < Sinatra::Base
   end
 
   get '/start' do
-    $game = Game.new Player, Board
+    # $game = Game.new Player, Board
+    # @board = $game.own_board_view $game.player_1
     @visitor = params[:name]
     erb :start
   end
 
   get '/getboard' do
+    $game = Game.new Player, Board
     @board = $game.own_board_view $game.player_1
     erb :getboard
   end
