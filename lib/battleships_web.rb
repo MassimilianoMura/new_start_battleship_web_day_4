@@ -41,6 +41,15 @@ class BattleshipsWeb < Sinatra::Base
     erb :getboard_and_place_ships
   end
 
+  get '/battle' do
+
+    @board = $game.own_board_view $game.player_1
+
+    erb :battle
+
+  end
+
+
 
   run! if app_file == $0
 end
