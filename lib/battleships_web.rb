@@ -49,6 +49,19 @@ class BattleshipsWeb < Sinatra::Base
 
   end
 
+  post '/battle' do
+
+
+
+    coordinates = (params[:x_coord].to_s + params[:y_coord].to_s).to_sym
+    $game.player_2.shoot coordinates
+
+    @board = $game.own_board_view $game.player_1
+
+    erb :battle
+
+  end
+
 
 
   run! if app_file == $0
