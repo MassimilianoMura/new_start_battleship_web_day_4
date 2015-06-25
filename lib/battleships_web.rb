@@ -22,5 +22,12 @@ class BattleshipsWeb < Sinatra::Base
     erb :getboard_and_place_ships
   end
 
+  # get '/getboard_and_place_ships' do
+    
+
+
+
+    
+
   run! if app_file == $0
 end

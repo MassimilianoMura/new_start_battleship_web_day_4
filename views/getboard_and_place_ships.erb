@@ -1,6 +1,35 @@
 <div>
   <pre><%= @board %></pre>
   <p>Time to place your ships.</p>
-  <p>Choose co-ordinates!</p>
+
+<div>
+  <form action='/getboard_and_place_ships' method='POST'>
+    <label>Select and place your ship</label>
+      <select name='ships'>
+        <option>submarine</option>
+      </select>
+      <select name='x_coord'>
+        <option value="A">A</options>
+      </select>
+      <select name='y_coord'>
+        <option ="1">1</options>
+      </select>
+      <select name='orientation'>
+        <option value='horizontally'>horizontally</options>
+      </select>
+    <input type='submit' value='Place'></input>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+  </form>
+
+
 
 </div>
