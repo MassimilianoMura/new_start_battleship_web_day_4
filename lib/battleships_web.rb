@@ -56,7 +56,7 @@ class BattleshipsWeb < Sinatra::Base
 
 
     coordinates = (params[:x_coord].to_s + params[:y_coord].to_s).to_sym
-    $game.player_2.shoot coordinates
+    $game.player_1.shoot coordinates
 
     @board = $game.own_board_view $game.player_1
     @board2 = $game.own_board_view $game.player_2
